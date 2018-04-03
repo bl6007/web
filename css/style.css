@@ -12,14 +12,16 @@
   margin: 0px;
   padding-top: 20px;
 }
+.Title{
+  border-bottom:1px solid gray;
+}
 a {
   color: blue;
   text-decoration: none;
 }
 h1 {
   font-size:45px;
-  text-align: center;
-  border-bottom:1px solid gray;
+  text-align: center;  
   margin:0;
   padding:20px;
 }
