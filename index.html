@@ -4,6 +4,30 @@
     <title>페르소나5</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+      function nightDayHandler(self) {
+        var bodyTagStyle = document.querySelector('body').style;
+        var aTagList = document.querySelectorAll('a');
+        if(self.value === 'Night')
+        {
+          self.value = 'Day';
+          bodyTagStyle.backgroundColor = 'black';
+          bodyTagStyle.color = 'white';
+
+          for(var i=0; i< aTagList.length; ++i)
+            aTagList[i].style.color = 'powderblue';
+        }
+        else
+        {
+          self.value = 'Night';
+          bodyTagStyle.backgroundColor = 'white';
+          bodyTagStyle.color = 'black';
+
+          for(var i=0; i< aTagList.length; ++i)
+            aTagList[i].style.color = 'blue';
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -12,29 +36,8 @@
         <a href="index.html" target="_blank">페르소나5</a><br>
       </h1>
       <p align="center">
-        <!-- <input type="button" name="btn_Night" value="Night" onclick="
-          document.querySelector('body').style.backgroundColor = 'black';
-          document.querySelector('body').style.color = 'white';
-        ">
-        <input type="button" name="btn_Day" value="Day" onclick="
-          document.querySelector('body').style.backgroundColor = 'white';
-          document.querySelector('body').style.color = 'black';
-          "> -->
-        <input type="button" name="btn_DayNight" value="Night" onclick="
-        if(this.value === 'Night')
-        {
-          this.value = 'Day';
-          document.querySelector('body').style.backgroundColor = 'black';
-          document.querySelector('body').style.color = 'white';
-        }
-        else
-        {
-          this.value = 'Night';
-          document.querySelector('body').style.backgroundColor = 'white';
-          document.querySelector('body').style.color = 'black';
-        }
-        ">
-        </p>
+        <input type="button" name="btn_DayNight" value="Night" onclick=" nightDayHandler(this)">
+      </p>
     </div>
     <div id="grid">
       <ol>
